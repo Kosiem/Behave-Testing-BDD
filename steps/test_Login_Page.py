@@ -1,17 +1,12 @@
 from behave import given, when, then
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import selenium.webdriver.support.expected_conditions as ec
 import selenium.common.exceptions
 
-@given(u'User open browser, enter site URL, and login page appears')
+@given(u'User enter site URL, and login page appears')
 def step_initial_condition(context):
 
-    context.driver = webdriver.Chrome()
-    context.driver.get("https://www.saucedemo.com")
-    context.driver.maximize_window()
-    context.driver.delete_all_cookies()
     context.login = context.driver.find_element(By.XPATH, "//input[@name='user-name']")
     context.password = context.driver.find_element(By.XPATH, "//input[@name='password']")
     context.button = context.driver.find_element(By.XPATH, "//input[@type='submit']")
