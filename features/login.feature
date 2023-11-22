@@ -14,14 +14,17 @@ Feature: Login functionality
     When User writes a bad login
     And User writes a bad password
     Then User shouldn't be logged in
+    Then User closes the message
 
   Scenario: User writes bad login, good password and is not logged in
     When User writes a bad login
     And User writes a good password
     Then User shouldn't be logged in
+    Then User closes the message
 
   Scenario: User writes good login, bad password and is not logged in
     When User writes a good login
     And User writes a bad login
     Then User shouldn't be logged in
+    Then User closes the message
 
