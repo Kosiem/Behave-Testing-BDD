@@ -4,7 +4,6 @@
 Feature: Sorting products on the site
 
   Background: The user is logged in and is on the store page
-    Given User is on login page
     Then User write correct login
     And User write correct password
     And User click login button

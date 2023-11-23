@@ -24,7 +24,7 @@ Feature: Login functionality
 
   Scenario: User writes good login, bad password and is not logged in
     When User writes a good login
-    And User writes a bad login
+    And User writes a bad password
     Then User shouldn't be logged in
     Then User closes the message
 

@@ -4,6 +4,10 @@ Feature: Possibility of adding items to the cart
 
   Background: User open browser, enter site URL, and login page appears
     Given  User open browser, enter site URL, and login page appears
+    When User writes a good login
+    And User writes a good password
+    Then User should be logged in
+
 
   Scenario: User selects a product - backpack to the cart
     When User click on add to cart button on backpack
